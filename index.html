@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300&family=Darker+Grotesque:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
+    <script src="gen.js"></script>
+    <section data-id="true"></section>
+    <div id="dialog">
+        <h1 class="title">GN-SS DEMO</h1>
+        <h2 class="title">GENERATIVE NOISE-SEGMENT SYSTEM</h2>
+        <hr>
+        <p id="hoverInfo">HOVER OVER EACH SLIDER AT THE TOP OF THE PAGE TO VIEW IT'S FUNCTION</p>
+        <p id="frInfo">NOTE -- THE FRAMERATE SLIDER <b>MUST BE ABOVE MINIMUM VALUE</b> TO SEE DISPLAY UPDATES</p>
+        <p id="hide">CLICK ANYWHERE ON THIS WINDOW TO HIDE</p>
+    </div>
+    <div id="controls">
+        <input class= "slider", id='frameRateVal', type='range', min="1" value="30" max="30", data-tooltip="FRAME RATE">
+      
+        <input class= "slider", id='xOffset', type='range', min="0" value="0" max="10000" data-tooltip="X OFFSET">
+     
+        <input class= "slider", id='yOffset', type='range', min="0" value="0" max="10000" data-tooltip="Y OFFSET">
+    
+        <input class= "slider", id='segments', type='range', min="1", value="1" data-tooltip="INTENSITY">
+   
+        <input class= "slider", id='numLines', type='range', min="4", value = '4'data-tooltip="NUMBER OF LINES">
+    </div>
+</body>
+</html>
