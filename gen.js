@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(1920, 1080);
+  createCanvas(window.screen.width, window.screen.height);
   $('#dialog').on('click', () => $('#dialog').fadeOut(300, () => $('#dialog').css('display', 'none')))
 }
 
@@ -11,6 +11,12 @@ function draw() {
   let $segments = $("#segments");
   let $numLines = $("#numLines");
   let $frameRateVal = $('#frameRateVal');
+
+  let color1 = $('color1')
+  let color2 = $("color2");
+  let color3 = $("color3");
+  let color4 = $("color4");
+  let color5 = $("color5");
 
   $xOffset.attr('max', width / 2.2)
   $yOffset.attr("max", height / 4);
@@ -33,9 +39,15 @@ function draw() {
   lines(width, height, numLines, xOffset, yOffset, segments);
 
 }
-
-function randomColor() {
-  let colors = ["#ffc14d", "#b39836", "#fff6d3", "#ffeca6", "#ffffff"];
+// ["#ffc14d", "#b39836", "#fff6d3", "#ffeca6", "#ffffff"];
+function randomColor(color1, color2, color3, color4, color5) {
+  let colors = [
+    color1.value,
+    color2.value,
+    color3.value,
+    color4.value,
+    color5.value,
+  ];
   return random(colors);
 }
 
@@ -48,7 +60,7 @@ function lines(width, height, numLines, xOffset, yOffset, segments) {
     yStep += height / numLines
   ) {
     let tracker = 0;
-    stroke(randomColor());
+    stroke(randomColor(color1, color2, color3, color4, color5));
 
     for (
       let x = xOffset;

@@ -21,22 +21,27 @@
     <section data-id="true"></section>
     <div id="dialog">
         <h1 class="title">NOISY LINES DEMO</h1>
-        <h2 class="title">GNSS | GENERATIVE NOISE-SEGMENT SYSTEM</h2>
+        <h2 class="title">GNS | GENERATIVE NOISE SYSTEM</h2>
         <hr>
         <p id="hoverInfo">HOVER OVER EACH SLIDER AT THE TOP OF THE PAGE TO VIEW IT'S FUNCTION</p>
-        <p id="frInfo">NOTE -- THE FRAMERATE SLIDER <b>MUST BE ABOVE MINIMUM VALUE</b> TO SEE DISPLAY UPDATES</p>
-        <p id="hide">CLICK ANYWHERE ON THIS WINDOW TO HIDE</p>
+        <p id="frInfo">NOTE -- THE SPEED SLIDER <b>MUST BE ABOVE MINIMUM VALUE</b> TO SEE DISPLAY UPDATES</p>
+        <p id="hide"><b>CLICK ANYWHERE ON THIS WINDOW TO HIDE</b></p>
     </div>
     <div id="controls">
-        <input class= "slider", id='frameRateVal', type='range', min="1" value="30" max="30", data-tooltip="FRAME RATE">
+        <input class= "slider", id='frameRateVal', type='range', min="1" value="30" max="30", data-tooltip="SPEED">
       
-        <input class= "slider", id='xOffset', type='range', min="0" value="0" max="10000" data-tooltip="X OFFSET">
+        <input class= "slider", id='xOffset', type='range', min="0" value="0" max="10000" data-tooltip="WIDTH">
      
-        <input class= "slider", id='yOffset', type='range', min="0" value="0" max="10000" data-tooltip="Y OFFSET">
+        <input class= "slider", id='yOffset', type='range', min="0" value="0" max="10000" data-tooltip="HEIGHT">
     
         <input class= "slider", id='segments', type='range', min="1", value="1" data-tooltip="INTENSITY">
    
         <input class= "slider", id='numLines', type='range', min="4", value = '4'data-tooltip="NUMBER OF LINES">
+        <input type="color" id="color1" value="#ffc14d" class="color">
+        <input type="color" id="color2" value="#b39836" class="color">
+        <input type="color" id="color3" value="#fff6d3" class="color">
+        <input type="color" id="color4" value="#ffeca6" class="color">
+        <input type="color" id="color5" value="#ffffff" class="color">
     </div>
 </body>
 </html>
